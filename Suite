@@ -1,0 +1,12 @@
+function suite(nbr) {
+  
+var u=[0,1,2],s=0;
+for (var i=3;i<=nbr;i++)
+{
+    s=s+((2*u[i-1])+(3*u[i-3]));
+    u[i]=s;
+    return u[i];
+}
+}
+console.log(suite (7));
+
