@@ -1,0 +1,57 @@
+function inverse( nums ) 
+
+{
+
+    var k = 1;
+
+    var max = 1;
+
+    var num=[];
+
+    for(let i = 1; i<nums.length; i++)
+
+    {
+
+        if(nums[i-1]==nums[i])
+
+        {
+         num.push(nums);
+           
+
+        }
+
+        else if(nums[i-1]+1==nums[i])
+
+        {
+
+            num.push(nums);
+
+            k++;
+
+        }
+
+         else
+
+       {
+            k= 1;
+        }
+
+        max =num;
+
+    }
+
+    let inv = [];
+
+    for(let j = num.length - 1; j >= 0; j--)
+
+    {
+
+        inv += num[j];
+
+    }
+
+    return inv;
+
+}
+
+console.log(inverse([1,2,3,8,4,6]))
